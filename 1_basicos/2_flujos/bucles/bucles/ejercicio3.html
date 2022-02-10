@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      style="
+        background-color: aqua;
+        height: 50px;
+        width: 50px;
+        margin-left: 50px;
+      "
+    ></div>
+
+    <script>
+      //pedir nºcuadrados y ancho
+      // pintarlos en escalera
+      var veces = prompt("numero de cuadrados");
+      var lado = prompt("ancho");
+      for (i = 0; i < veces; i++) {
+        var margin = i * lado;
+        document.write(
+          `<div style="background-color: red; height: ${lado}px; width: ${lado}px;margin-left: ${margin}px;"></div>`
+        );
+      }
+    </script>
+
+    <script>
+      var veces = parseInt(prompt("numero de cuadrados"));
+      var lado = parseInt(prompt("ancho"));
+      var alto = parseInt(prompt("alto"));
+      for (i = 0; i < veces; i++) {
+        var margin = i * lado;
+        document.write(`
+    <div style="background-color: red; height: ${alto}px; width: ${lado}px;margin-left: ${margin}px;"></div>`);
+      }
+    </script>
+  </body>
+</html>

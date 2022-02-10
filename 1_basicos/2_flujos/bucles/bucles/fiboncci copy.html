@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fibonacci</title>
+</head>
+<body>
+    <script>
+        var numero = parseInt(prompt(`introduce el numero de detencion de la escala`));
+
+        var anterior = 0;
+        var ultimo = 1;
+
+        document.write(`${anterior} <br>`);
+        document.write(`${ultimo} <br>`);
+        
+        for(var i = 0; ultimo < numero; i++){ 
+            var siguiente = anterior + ultimo;
+            if (siguiente>numero){
+                break
+            }            
+            document.write(` ${siguiente} <br>`);
+            anterior = ultimo;
+            ultimo = siguiente;
+        }
+        
+        document.write("fin")   
+  
+
+    </script>
+</body>
+</html>

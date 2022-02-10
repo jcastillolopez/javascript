@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // dados 54321 segundos, calcular las horas minutos y segundos que hay, resultado por consola. con concatenacion de textos.
+      var segundos_dados = 54321;
+      var horas = parseInt(segundos_dados / 60) / 60;
+      var minutos = parseInt(segundos_dados % 60);
+      var segundos = horas % 60;
+      console.log(segundos_dados);
+      console.log(horas);
+      console.log(minutos);
+      console.log(segundos);
+    </script>
+  </body>
+</html>

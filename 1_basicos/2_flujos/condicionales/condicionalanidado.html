@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portero de discoteca</title>
+  </head>
+  <body>
+    <script>
+      //pedir la edad por pantalla
+      // si la persona es mayor de edad  que en el pais en que me encuentro bienbenida si no le hechamos, para cualquier pais//
+      var edad = Number(prompt("introduce tu edad"));
+      const mayoria_edad = 18;
+
+      if (edad > 0 && edad <= mayoria_edad) {
+        console.log(" No puedes Pasar");
+      } else if (edad > 18) {
+        console.log("puedes pasar");
+      } else {
+        console.log("no es una edad");
+      }
+    </script>
+  </body>
+</html>

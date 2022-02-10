@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //pedir un programa para saber si un numeo n es primo.
+      // primo es cuando solo es divisible por el y la unidad
+      var numero = parseInt(prompt(" dame el numero"));
+      var divisor = 2;
+      while(divisor<numero){      
+       if(numero % divisor === 0){
+              break
+       } 
+         divisor++          
+      }
+   if(numero!== divisor){
+     document.write(`el numero ${numero} no es PRIMO es divisible por ${divisor}`)
+   }else{
+     document.write(`el numero ${numero} es PRIMO`)
+   }
+     </script>
+  </body>
+</html>

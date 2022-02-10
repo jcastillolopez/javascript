@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // pedir un numero por pantalla sumarle 2 si impar mostrar su numero
+      // par listado hacia abajo
+      var html = "<ul>";
+      var numero = parseInt(prompt("dime un numero"));
+      if ((numero + 2) % 2 !== 0) {
+        document.write(`este numero es ${numero}`);
+      } else {
+        for (var i = numero; i >= 1; i--) {
+          html += `<li>${i}</li>`;
+        }
+      }
+      html += "</ul>";
+      document.write(html);
+    </script>
+  </body>
+</html>
