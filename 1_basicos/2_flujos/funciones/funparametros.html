@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// existen dos tipos de parametros:
+// obligatorios
+// optativos
+//una funcion puede recibir cualquier cantidad de parametros
+// se pasan a la funcion atraves de sus parentesis separados por ,
+// 1º prametros obligatorios
+//2º parametros optativos
+var nombre = 'Juan';
+function saludar(pnombre, papellidos ='rodriguez'){    
+    document.write(`<h1>Hola${pnombre} ${papellidos}</h1>`)
+    }
+ saludar('Maria','lopez');
+ saludar('Pepe');
+ saludar(nombre);
+    </script>
+
+</body>
+</html>

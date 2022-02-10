@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+
+<body>
+
+    <li></li>
+    <script>
+      //solicita y visualice una serie de numeros distintos de 0,
+      // el programa me pedira n numeros cuando introduzcamos el numero 0 parara y me sacara todos los numeros introducidos menos el 0
+      
+     var listado = '<ul>'
+        do {
+            var numero = parseInt(prompt('dame el numero'))
+            if(numero!== 0)
+        listado += `<li>${numero}</li>`
+        } while(numero !== 0)
+        listado +=  '</ul>'
+        document.write(listado)
+
+
+    </script>
+</body>
+</html>
