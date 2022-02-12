@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>decrecientes</title>
+</head>
+<body>
+    <script>
+     let numero1 = parseInt(prompt('dame un numero'));
+     let numero2 = parseInt(prompt('dame un numero'));
+     let numero3 = parseInt(prompt('dame un numero'));
+     document.write(`el numero1 es ${numero1} <br>`);
+     document.write(`el numero2 es ${numero2} <br>`);
+     document.write(`el numero3 es ${numero3} <br><br><br>`);
+
+
+         if(numero1 > numero2 && numero1 > numero3){            
+            if(numero2 > numero3) {
+                document.write(`la lista es ${numero1}  , ${numero2} y ${numero3}<br>`);
+            }else{
+                document.write(`la lista es ${numero1}  , ${numero3} y ${numero2}<br>`);
+            }
+            
+         }else if(numero2 > numero1 && numero2 > numero3){
+             if(numero1 > numero3){
+                document.write(`la lista es ${numero2}  , ${numero1} y ${numero3}<br>`);
+             }else {
+                document.write(`la lista es ${numero2}  , ${numero3} y ${numero1}<br>`);
+             }          
+         }else if(numero3 > numero1 && numero3 > numero2){
+              if(numero1 > numero2){
+                document.write(`la lista es ${numero3}  , ${numero1} y ${numero2}<br>`); 
+              } else{
+                document.write(`la lista es ${numero3}  , ${numero2} y ${numero1}<br>`);
+              }
+         
+         }
+
+
+    </script>
+</body>
+</html>

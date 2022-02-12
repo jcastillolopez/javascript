@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display: flex; flex-direction: column;">
+    <div style="background-color: black;width: 100px;height: 100px;margin: 10px;"></div>
+</div>
+
+    <script>
+        // crear un script que me permita pintar n cuadrados de colores alternos,se pide numero de cuadrados,lado,color.pero la funcion tiene que permitirme colocarlos en fila y columnas
+//  1º pimtar un solo cuadrado
+//  2º pintar n cuadrados
+//  3º colocalor en vertical o horizontal
+
+function pintarcuadrado(pcolor,plado){
+    let cuadrado =`<div style="background-color: ${pcolor};width: ${plado}px;height: ${plado}px;margin: 10px;"></div>`
+    document.write(cuadrado);
+}
+pintarcuadrado('tomato' , 100)
+function pintarNcuadrados(pcantidad,pcolor,plado){
+    for(i=1;i<=pcantidad;i++){
+        let color = (i % 2 === 0) ? pcolor :'black';
+        let lado = plado;
+        pintarcuadrado(color,lado);
+    }
+}
+pintarNcuadrados(10,'tomato',100)
+    </script>
+
+
+</body>
+</html>

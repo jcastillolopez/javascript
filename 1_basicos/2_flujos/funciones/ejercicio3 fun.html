@@ -19,6 +19,7 @@ function calcularpvp( preciocompra,margenbeneficio,ivaaplicar){
    let pvp = precioConMargen + iva;
 
    console.log(pvp)
+   imprimirpvp(precioConMargen, iva, pvp )
 } 
 function margenBeneficio( preciocompra, margenbeneficio){
 let precioventa = ( (preciocompra * margenbeneficio)/100);
@@ -28,7 +29,7 @@ function fIva ( preciocompra, ivaaplicar) {
    let iva = ((preciocompra * ivaaplicar)/100) 
    return iva
 }
-function imprimirpvp( precioventa,iva,pvp){
+function imprimirpvp( precioventa, iva, pvp){
     document.write(`base imponible ${precioventa}€ + ${iva}€  =  ${pvp}€`)    
 }
 calcularpvp(1000,50,21);
