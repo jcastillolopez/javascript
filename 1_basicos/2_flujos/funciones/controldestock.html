@@ -16,36 +16,46 @@
         // venta de paraguas
         // sistema de identificaciones de stock minimo(5 o menos)
         //1º algo para almacenar stock de paraguas
-        let stock = 0;
+
         //funcion para añadir stock (cantidades distintas cada vez)me devolvera la cantidad de stock global
         // crear una funcion que me permita mostrar el stock
+        let stock = 100;
+        let cantidadVenta = parseInt(prompt(`quieres vender. dime cantidad  si no di 0`))
+        let cantidadCompra = parseInt(prompt(`quieres comprar. dime cantidad si no di 0`))
+
         function mostrarStock() {
-            document.write(`tu cantidad de stock es ${stock}`)
+            document.write(`/-.......tu cantidad de stock es: ${stock}....../<br/>`);
         }
-
-        function addStock(pcantidad) {
-            stock = stock + pcantidad;
+        function addStock(cantidadCompra) {
+            mostrarStock()
+            stock = stock + cantidadCompra;
             mostrarStock();
+            return (stock);
 
         }
-        function buyProduct(pventa) {
-            if (pventa > stock) {
-                return document.write(`No tengo suficiente stock para servirlo solo tengo ${stock}`);
+        function ventaStock(cantidadVenta) {
+            mostrarStock()
+            if (cantidadVenta > stock) {
+                return document.write(`Esta cantidad  es insuficiente para hacer la venta <br/>`);
+                controlStock()
             } else {
-                stock = stock - pventa;
+                stock = stock - cantidadVenta;
                 mostrarStock();
+                return (stock);
             }
         }
-        function comprobarStock() {
-            const STOCK_MINIMO = 5
-            if (stock <= STOCK_MINIMO) {
-                console.log(document.write`el stock de paraguas esta en minimos `);
-
-                return stock;
-                mostrarStock();
+        function controlStock() {
+            const MINSTOCK = 5;
+            if (stock <= MINSTOCK) {
+                document.write(`Hay que hacer compra del  stock solo quedan${stock}`);
+            } else {
+                document.write(`el stock actual es: ${stock}`);
             }
-        }
 
+        }
+        ventaStock(cantidadVenta);
+        addStock(cantidadCompra);
+        mostrarStock();
     </script>
 </body>
 
