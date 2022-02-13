@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="tablero" style="background-color: black; height:160 ; width: 160;"></div>
+
+    <script>
+        // cuadrados color alternos, pedir numero de cuadrados,lado,color
+        // me tine que permitir colocalor en vertical o horizontal
+        //let cantidad =parseInt(prompt(`dime el numero de cuadrados`))
+        function pintar_cuadrado(pColor, pLado) {
+            let cuadrado = `<div style="display: flex;flex-direction: row; background-color: ${pColor};height: ${pLado}px;width: ${pLado}px ;margin: ${pLado}px;"></div>`;
+            document.write(cuadrado);
+        }
+        function columna_cuadrados(pNºcuadrados, pColor1, pColor2, pLado,) {
+
+            for (let i = 1; i <= pNºcuadrados; i++) {
+                for (let j = 1; j <= pNºcuadrados; j++) {
+                    if (j % 2 === 0) {
+                        pColor = pColor1;
+                        pintar_cuadrado(pColor, pLado);
+
+                    } else {
+                        pColor = pColor2;
+                        pintar_cuadrado(pColor, pLado);
+                    }
+                }
+            }
+
+        }
+
+        columna_cuadrados(5, 'black', 'red', 30);
+        pintar_cuadrado('blue', 100)
+
+    </script>
+
+</body>
+
+</html>

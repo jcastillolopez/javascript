@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // cuadrados color alternos, pedir numero de cuadrados,lado,color
+        // me tine que permitir colocalor en vertical o horizontal
+        //let cantidad =parseInt(prompt(`dime el numero de cuadrados`))
+        function pintar_cuadrado(pColor, pLado) {
+            let cuadrado = `<div style=" background-color: ${pColor};height: ${pLado}px;width: ${pLado}px ;"></div>`;
+            return (cuadrado)
+        }
+        function fimpar_cuadrados(pNºcuadrados, pColor1, pColor2, pLado,) {
+            let filaimp = `<div style="display: flex;flex-direction: row;">`
+            for (let i = 1; i <= pNºcuadrados; i++) {
+                if (i % 2 === 0) {
+                    pColor = pColor1;
+                    filaimp += pintar_cuadrado(pColor, pLado);
+                } else {
+                    pColor = pColor2;
+                    filaimp += pintar_cuadrado(pColor, pLado);
+                }
+            }
+            filaimp += `</div>`
+            document.write(filaimp)
+        }
+
+        function fpar_cuadrados(pNºcuadrados, pColor1, pColor2, pLado,) {
+            let filapar = `<div style="display: flex;flex-direction: row;">`
+            for (let i = 1; i <= pNºcuadrados; i++) {
+                if (i % 2 === 0) {
+                    pColor = pColor2;
+                    filapar += pintar_cuadrado(pColor, pLado);
+                } else {
+                    pColor = pColor1;
+                    filapar += pintar_cuadrado(pColor, pLado);
+                }
+            }
+            filapar += `</div>`
+            document.write(filapar)
+        }
+
+        fimpar_cuadrados(8, 'green', 'blue', 50)
+        fpar_cuadrados(8, 'green', 'blue', 50)
+        fimpar_cuadrados(8, 'green', 'blue', 50)
+        fpar_cuadrados(8, 'green', 'blue', 50)
+        fimpar_cuadrados(8, 'green', 'blue', 50)
+        fpar_cuadrados(8, 'green', 'blue', 50)
+        fimpar_cuadrados(8, 'green', 'blue', 50)
+        fpar_cuadrados(8, 'green', 'blue', 50)
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,46 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>control de stock</title>
 </head>
+
 <body>
     <script>
-//una aplicacion para controlar el stock de mi tienda de paraguas negros, para ello necesito saber:
-//  stock de paraguas
-//  anñadir patraguas al stock
-// venta de paraguas
-// sistema de identificaciones de stock minimo(5 o menos)
-//1º algo para almacenar stock de paraguas
-   let stock = 125;
-   //funcion para añadir stock (cantidades distintas cada vez)me devolvera la cantidad de stock global
- // crear una funcion que me permita mostrar el stock
-   function mostrarStock(){
-    console.log (`tu cantidad de stock es ${stock}`)
-   }
-  
-   function addStock(pcantidad){
-     stock = stock + cantidad
-     mostrarStock()
-       
-   }
-    function buyProduct(pventa){
-         if(stock < pventa){
-             return `No tengo suficiente stock para servirlo solo tengo ${stock}`
-         }
-         stock= stock - pventa
-         comprobarStock()
-         return stock       
-        }  
+        //una aplicacion para controlar el stock de mi tienda de paraguas negros, para ello necesito saber:
+        //  stock de paraguas
+        //  anñadir patraguas al stock
+        // venta de paraguas
+        // sistema de identificaciones de stock minimo(5 o menos)
+        //1º algo para almacenar stock de paraguas
+        let stock = 0;
+        //funcion para añadir stock (cantidades distintas cada vez)me devolvera la cantidad de stock global
+        // crear una funcion que me permita mostrar el stock
+        function mostrarStock() {
+            document.write(`tu cantidad de stock es ${stock}`)
+        }
+
+        function addStock(pcantidad) {
+            stock = stock + pcantidad;
+            mostrarStock();
+
+        }
+        function buyProduct(pventa) {
+            if (pventa > stock) {
+                return document.write(`No tengo suficiente stock para servirlo solo tengo ${stock}`);
+            } else {
+                stock = stock - pventa;
+                mostrarStock();
+            }
+        }
         function comprobarStock() {
             const STOCK_MINIMO = 5
-           if (stock <= STOCK_MINIMO){
-            console.log(`el stock de paraguas esta en minimos ${mostrarStock}`)
-           }
+            if (stock <= STOCK_MINIMO) {
+                console.log(document.write`el stock de paraguas esta en minimos `);
+
+                return stock;
+                mostrarStock();
+            }
         }
 
     </script>
 </body>
+
 </html>
