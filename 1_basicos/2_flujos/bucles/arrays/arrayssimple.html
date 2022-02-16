@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // lita de elementos de la misma clase
+        // const nombreAlumnos =[]   
+        //const nombresAlumnos = []; //array vacio
+        const nombresAlumnos = new Array('Celia', 'Amalia', 'Andres', 'Ruben', 'Pascual', 'Isa');
+        document.write(nombresAlumnos);
+        // para sacar la lista completa
+        document.write(nombresAlumnos.length);
+        // para accder al elemento concreto se le pasa el numero de ubicacion
+        function pintarAlumnos(pListaNombres) {
+
+            let ul = '<ul>';
+            for (let i = 0; i < pListaNombres.length; i++) {
+                let color = (i % 2 !== 0) ? 'red' : 'green';
+                ul += `<li style="color: ${color}">${pListaNombres[i]}</li>`
+            }
+            ul += '</ul>'
+            document.write(ul);
+        }
+        pintarAlumnos(nombresAlumnos)
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // @function o funcion flecha es una forma abreviada de escribir una funcion anonima
+        // me permite crear estructura con muchas llaves evito hadeukencode(bandera)/ cllbackHell
+        // hacer mas legible mi codigo
+        // como pasar una funcion anonima a flecha sin dolor pasos:
+        // 1º quito la palabra function y la sustituyo por una flecha()y la situo detras del parentesis
+        // 2º solo si la function recibe un unico parametro, si es cero a mas de uno no puedo quitarlos
+        // 3º si la funcion solo ejecuta una unica  linea de accion  dentro de las llaves puedo quitar las llaves. y si esa accion es un return tambienpuedo quitar el return
+        const sumar = function (pnumereo1, pnumero2) {
+            let resultado = pnumero1 + pnumero2;
+            return resultado;
+            // }
+            console.log(sumar(5, 2))
+            // la misma en flecha
+            // const sumita = (pnumero1, pnumero2) => pnumero1 + pnumero2;
+            let resultado = sumita(2, 5);
+            console.log(resultado)
+         hacer en flecha la media de dos numeros
+            const media = (pnumero1, pnumero1) => (pnumero1 + pnumereo2) / 2;
+            console.log(media(5, 2));
+
+    </script>
+</body>
+
+</html>

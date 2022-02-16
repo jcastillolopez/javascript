@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //las funciones flecha es una forma abreviada de escribir una funcion anonima o expresiva/declarativa. QUE SOMOS UN PUTOS VAGOS. Me permite eveitar estructuras con muchas llaves evito hadeukencode/callbackHell. Hace mas legible mi codigo.
+
+        // como pasar una funcion anonima a funcion flecha sin dolor.
+
+        /*
+
+            paso 1: quito la palabra function y la sustituyo por una flecha (=>) y la situo detras del parentesis.
+
+            paso 2: solo si la funcion recibe un unico parametro puedo quitar los parentesis, si es cero a mas de uno no puedo quitarlos.
+
+            paso 3: si la funcion solo ejecuta una unica linea de acción dentro de la llaves puedo quitar dichas llaves. Y si esa acción es un return tambien puedo quitar el return
+
+        */
+        // crear un array de numeros vacio
+        const numeros = new Array();
+        // meter dentro del array diez numeros aleatorios ( math.randow) entre 0-100 los numeros tienen que ser enteros
+        for (let i = 0; i < 10; i++) {
+            let numeroaleatorio = parseInt(Math.random() * 101);
+            numeros[i] = numeroaleatorio;
+        }
+        //document.write(numeros);
+        function pintararray(parray) {
+            let ul = `<ul> `;
+            for (let numero of parray) {
+                ul += `<li>${numero}</li>`
+            }
+            ul += `</ul>`
+            document.write(ul);
+        }
+        function filtrarDivisibles(pArray, pNumero) {
+            const listafiltrada = new Array();
+
+
+
+        }
+
+        // quiero pintar mi array de numeros en una lista no numerada, solo quiero los numeros divisibles * 3 (filtrar)
+
+
+    </script>
+</body>
+
+</html>

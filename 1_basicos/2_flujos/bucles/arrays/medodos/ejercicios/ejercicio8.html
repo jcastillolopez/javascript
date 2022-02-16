@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //*Realizar un programa que me pida una medida en
+        // metros y me diga cuantos centímetros son. Tiene que
+        //  funcionar cada vez que yo quiera ejecutarla no cuando
+        // recarguemos la pagina*/
+
+        let medidametros = parseInt(prompt(` dime la medida`));
+        function pasaracm(medidametros) {
+            let medidacm = medidametros * 100;
+            document.write(`Estos ${medidametros}m es igual a ${medidacm}cm`);
+
+        }
+
+        pasaracm(medidametros)
+    </script>
+</body>
+
+</html>

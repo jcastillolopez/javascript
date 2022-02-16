@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //pintar un listado de nombres, quiero que me mostreis por pantalla aquellos nombre que empiecen por A
+
+        const lista = new Array('Juan', 'Antonio', 'celia', 'amalia', 'Pedro');
+        const lista2 = new Array('Julian', 'Javi', 'Ana', 'Manu', 'Enrique');
+        //nombre[0] -> 'J'
+        function pintarLista(pLista) {
+            let ul = '<ul>';
+            for (let elemento of pLista) {
+                console.log(elemento);
+                ul += `<li>${elemento}</li>`;
+            }
+            ul += `</ul>`;
+            document.write(ul);
+        }
+        function filtrarLista(pLista, pFiltro) {
+            const listaFiltrada = new Array();
+            for (let elemento of pLista) {
+                if (elemento[0].toLowerCase() === pFiltro.toLowerCase()) {
+                    let posicion = listaFiltrada.length
+                    listaFiltrada[posicion] = elemento;
+                }
+
+            }
+            /*  for (let i = 0; i < pLista.lenght; i++) {
+                  let pElemento = listaFiltrada.lenght;
+                  if (pLista[i].toLowerCase() === pElemento.toLowerCase()) {
+                      listaFiltrada[i] = pElemento;
+                  }
+              }*/
+            console.log(listaFiltrada);
+            return listaFiltrada
+        }
+
+        pintarLista(lista2)
+        pintarLista(filtrarLista(lista, 'a'));
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*Dado un array de meses
+              meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+             "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre",
+            “Diciembre”];
+             Hacer un programa que pida una época del año Invierno,
+             Otoño, Primavera y Verano y me diga que mese los
+             componen. A pesar de que las épocas del año sean con
+            meses partidos considerar meses enteros es decir
+             Invierno es Diciembre, Enero y Febrero por ejemplo.*/
+
+        const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+            "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+        const mesesprimavera = meses.slice(2, 5);
+        const mesesverano = meses.slice(5, 8);
+        const mesesotono = meses.slice(8, 11);
+        const mesesinvierno = meses.slice(11, 12).concat(meses.slice(0, 2));
+        let estaciones = prompt('dime la estacion');
+        let estacion = `meses${estaciones}`
+        document.write(`estacion: ${estacion}`)
+
+    </script>
+</body>
+
+</html>

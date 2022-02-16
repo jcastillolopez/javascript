@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>multiplos</title>
 </head>
+
 <body>
     <script>
-       let numero = parseInt(prompt('dame un numero'));
-        let suma = 0 
-        for(var i = 2; i<=11; i++){
-         let multiplo = i*numero;
-          suma += multiplo
-         document.write(`el numero ${multiplo} es multiplo de ${numero} <br>`);
+        let numero = parseInt(prompt('dame un numero'));
+        function numero(pnumero) {
+            let suma = 0
+            for (var i = 1; i <= 10; i++) {
+                let multiplo = i * pnumero;
+                suma += multiplo
+                document.write(`el numero ${multiplo} es multiplo de ${numero} <br>`);
+            }
+            document.write(`la suma de todos ellos es ${suma}`)
         }
-        document.write(`la suma de todos ellos es ${suma}`)
-        </script>
+        multiplos(numero)
+    </script>
 </body>
+
 </html>

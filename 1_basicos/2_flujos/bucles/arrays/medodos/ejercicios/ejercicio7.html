@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* Definir una función que determine si la cadena de texto
+           que se le pasa como parámetro es un palíndromo, es
+           decir, si se lee de la misma forma desde la izquierda y
+           desde la derecha. Ejemplo de palíndromo complejo: "La
+           ruta nos aporto otro paso natural”.*/
+        const frase = `La ruta nos aporto otro paso natural`
+        // const frase = `prueba`
+
+
+        function caracteres(pFrase) {
+            const frasecaracteres = new Array();
+            for (let i = 0; i < frase.length; i++) {
+                if (pFrase[i] !== " ") {
+                    frasecaracteres.push(pFrase[i].toLowerCase());
+                }
+            }
+            return frasecaracteres
+        }
+
+        function palindromo(frase_vuelta_caracteres) {
+
+            const reverfrase = frase_vuelta_caracteres;
+            const dechfrase = frase_vuelta_caracteres;
+
+            for (let i = 0; i < frase_vuelta_caracteres.length; i++) {
+                if (dechfrase[i] === reverfrase.reverse()[i]) {
+                    console.log(`La frase ${frase} : es un Palindromo`)
+                } else {
+                    return console.log(`La frase ${frase} : no es un Palindromo`)
+                }
+            }
+        }
+        palindromo(caracteres(frase))
+
+
+    </script>
+</body>
+
+</html>
