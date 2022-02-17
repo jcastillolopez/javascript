@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section id='servicios'>
+        <h2>nuestros servicios</h2>
+        <ul></ul>
+    </section>
+    <script>
+        // dado un Array de servicios llenar dinamicamente el ul con los elementos de dicho array
+
+        const servicios = new Array('Desarrollo Web', 'App Hibridas', 'Desarrolo de Apis', 'tocarle las narices a Juan')
+
+        const sectionServicios = document.getElementById('servicios');
+
+        const ulServicios = sectionServicios.getElementsByTagName('ul')[0];
+
+
+
+        function pintarListado(pListaServicios, pElementoDOM) {
+            let lis = "";
+            for (const servicio of pListaServicios) {
+                lis += `<li>${servicio}</li>`
+
+                pElementoDOM.innerHTML = lis;
+            }
+            pintarListado(servicios, ulServicios);
+        }
+
+
+
+
+        const servicios = getElementById('Services');
+
+
+
+
+    </script>
+</body>
+
+</html>

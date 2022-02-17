@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsById</title>
+</head>
+
+<body>
+
+    <section id='about Us '>
+
+        <h2>about Us</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor veniam doloribus
+            laudantium praesentium optio perspiciatis, facilis reiciendis? Explicabo quia quis
+            pariatur esse? Dicta, ullam quasi.</p>
+    </section>
+    <section id='ourservices'>
+
+        <h2>Services</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam quasi eligendi facilis,
+            ex ipsam est quisquam ea dicta reiciendis, dolor ad? Soluta voluptatibus optio et!</p>
+    </section>
+    <script>
+        const sectionServices = document.getElementById('ourservices');
+        console.log(sectionServices);
+        let parrafos = sectionServices.getElementsByTagName('p')
+        console.log(parrafos)
+        parrafos[0].innerText = 'Carlos me tienes frito'
+    </script>
+
+
+
+
+</body>
+
+</html>

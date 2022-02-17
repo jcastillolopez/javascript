@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>queySelector</title>
+</head>
+
+<body>
+    <span>Hola</span>
+    <div>
+        <div class="menu"></div>
+        <div class="menu"></div>
+        <div class="menu"></div>
+    </div>
+    <div id="cuadrado"></div>
+    <script>
+        // querySelectorAll me permite seleccionar todos los elementos de una lista de nodos o etiquetas que cumplan la condicion css entre parentesis
+        //querySelectorAll me devuelven un Arrray de NODOS, los get me devolvian un HTMLCollection la diherncia es que el qrray de nodos tiene metodos de array como por ejemplo foreach
+        // querySelector me selecciona el primer elemento que cumple dicha herencia css. no devuelve un array devuelve un objeto del DOM   
+        // capturar todos los menus e insertarles un texto
+
+        const menu1 = document.querySelector('.menu');
+        console.log(menu1)
+        menu1.innerText = 'Menu';
+
+        // capturar el menu2 e insertar un texto
+        const menu2 = document.querySelector('.menu:nth-child(2)');
+        menu2.innerText = 'Menu2';
+        console.log(menu2)
+
+        const menu3 = document.querySelector('.menu:nth-child(3)');
+        menu3.innerText = 'Menu3';
+        console.log(menu3)
+
+    </script>
+</body>
+
+</html>

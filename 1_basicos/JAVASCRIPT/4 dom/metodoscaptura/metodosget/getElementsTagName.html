@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>getElementsByTagName</title>
+</head>
+
+<body>
+    <p><strong>Juan</strong></p>
+    <p>Pepe</p>
+    <p>Carlos</p>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quibusdam tempora dolor
+            cupiditate inventore dolores fugit eius recusandae quaerat pariatur blanditiis, magni
+            hic velit laudantium repellat impedit maxime corrupti accusamus.</p>
+    </div>
+
+    <script>
+        const parrafos = docum.getElementsByTagName('p');
+
+        console.log(parrafos);
+        console.log(parrafos[1].innerText) = 'Celia';
+        parrafos[3].innerText = '<strong>Bienvenidos </strong> a la bootcam';
+
+        for (const parrafo of parrafos) {
+            parrafo.innerText = 'juan'
+
+        }
+    </script>
+</body>
+
+</html>

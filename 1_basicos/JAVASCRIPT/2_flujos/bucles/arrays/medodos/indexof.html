@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // INDEXOF ES Un metodo que busca un elemento del array si lo encuentra te devuelve su posicion y si no lo encuentra te devuelve el -1. solo sirve para arrays simples, no sirve para json
+
+        const listaanimales = new Array('perro', 'gato'.'periquito', 'rana', 'cebra');
+
+        let busqueda = 'Periquito'
+        let posicion = listaanimales.indexOf(busqueda.toLowerCase());
+        console.log(posicion)
+        console.log(listaanimales[posicion])
+
+        // No sirve para json
+
+        const listaalumnos = new Array(
+            {
+                nombre: 'juan',
+                edad: '39'
+
+            },
+            {
+                nombre: 'Ruben',
+                edad: '29'
+
+            },
+            {
+                nombre: 'Sara',
+                edad: '19'
+
+            },
+            {
+                nombre: 'Rodrigo',
+                edad: '9'
+
+            }
+
+        )
+        let nombreBuscar = 'Pepe'
+        // findIndex devuelve laposicion del objeto si lo encuentra y si no -1
+        // Tebdremos que trabajar con una funcion de condicion. Calback de condicion
+        // solo devuelve el primero si hay varios que cumplan la condicion
+        let posiciondebusqueda = listaalumnos.findIndex(function (alumno) {
+            // la funcion de condicion solo devuelve true o false
+            return alumno.nombre === nombreBuscar.toLowerCase();
+        })
+        console.log(posicionBusqueda)
+       // arrow function:
+              // let posicionBusqueda = listaalumnos.findIndex(alumno ==> alumno.nombre.toLowerCase()===nombreBuscar.toLowerCase());
+    </script>
+</body>
+
+</html>

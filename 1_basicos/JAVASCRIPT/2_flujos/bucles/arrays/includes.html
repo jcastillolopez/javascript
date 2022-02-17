@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // me permite buscar dentro de un string otro mas pequeño y me devuelve true o false, para todos los array
+
+        let frase = 'en un lugar de la mancha';
+        let palabra = 'Mancha';
+        let busqueda = frase.toLowerCase().includes(palabra.toLowerCase());
+        console.log(busqueda);
+        // como se aplica en arrays simples
+        const animales = new Array('perro', 'gato', 'periquito');
+        let animale = 'Gato'
+        let busqueda2 = animales.includes
+
+
+
+        const listaalumnos = new Array(
+            {
+                nombre: 'juan',
+                edad: '39'
+
+            },
+            {
+                nombre: 'Ruben',
+                edad: '29'
+
+            },
+            {
+                nombre: 'Sara',
+                edad: '19'
+
+            },
+            {
+                nombre: 'Rodrigo',
+                edad: '9'
+
+            }
+
+        )
+
+        //me gustaria encontrar los alumnos que contengan n dentro del nombre,empiecen o terminen
+        let letra = 'n'
+        const listaFiltrada = listaalumnos.filter(alumno => {
+            // incluya la letra n en cualquier parte
+
+            //  return alumno.nombre.toLowerCase().includes(letra.toLowerCase())
+        })
+        console.log(listaFiltrada)
+
+        // que incluya la letra n al principio' Width'
+
+        // return alumno.nombre.toLowerCase().starsWith(letra.toLowerCase())
+
+        // que incluya la letra n al final ' Width'
+
+        return alumno.nombre.toLowerCase().endsWith(letra.toLowerCase())
+    </script>
+</body>
+
+</html>
