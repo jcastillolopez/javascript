@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li id="red"="cambiarfondo('red')">Rojo</li>
+        <li id="green"="cambiarfondo('green')">Verde</li>
+        <li id="blue"="cambiarfondo('blue')">Azul</li>
+    </ul>
+
+    <script>
+        let lis = document.querySelectorAll(`ul li`);
+        for (let li of lis) {
+            li.addEventListener(`click`, cambiarFondo);
+
+        }
+        function cambiarFondo(event) {
+            console.log(event.target.id);
+            const body = document.body;
+            body.style.backgroundColor = event.target.id
+        }
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

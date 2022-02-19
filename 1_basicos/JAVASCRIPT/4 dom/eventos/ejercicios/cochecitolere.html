@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        figure img {
+            width: 150px;
+            transform: rotate(0deg);
+            transition: 0.0002s;
+            left: 0%;
+
+        }
+
+        .teclado {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+        }
+
+        .teclas {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        button {
+            width: 75px;
+            height: 75px;
+            background-color: black;
+            color: white;
+        }
+
+        figure {
+            border: 3px solid black;
+            height: calc(100vh - 250px);
+            padding: 0px;
+            margin: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <Div class="teclado">
+
+        <div class="teclas">
+            <button>ARRIBA</button>
+        </div>
+        <ul class="teclas">
+            <button>FRENAR</button>
+            <button></button>
+            <button>IZQUIERDA</button>
+            <button></button>
+            <button>DERECHA</button>
+            <BUtton></BUtton>
+            <button>ACELERAR</button>
+        </ul>
+        <div class="teclas">
+            <BUtton>ABAJO</BUtton>
+        </div>
+    </div>
+
+    <figure>
+        <img class="coche" src="https://www.deividart.com/libres/zycars-coche_camaro-2.png" alt="">
+    </figure>
+
+    <script>
+        const botones = document.querySelectorAll('button');
+        const coche = document.querySelector('.coche');
+        let aceleracion = 1;
+        let transition = 10;
+        let velocidad = 100;
+        let marginLeft = 0;
+        let marginTop = 0;
+        let rotacion = 180;
+
+        for (const boton of botones) {
+            boton.addEventListener('click', function () {
+                if (boton.innerText == 'DERECHA') {
+                    moverDch()
+
+                } else if (boton.innerText == 'IZQUIERDA') {
+                    if (marginLeft <= 0) {
+                        alert('Nos la hemos pegado muy atras')
+                    } else {
+                        moverIzq()
+                    }
+
+                } else if (boton.innerText == 'ARRIBA') {
+                    if (marginTop <= 0) {
+                        window.alert('Nos la hemos pegado muy alto');
+
+                    } else {
+                        moverAlt()
+                    }
+
+                } else if (boton.innerText == 'ABAJO') {
+                    moverBajo()
+
+                } else if (boton.innerText == 'FRENAR') {
+                    frenar()
+                }
+                else if (boton.innerText == 'ACELERAR') {
+                    acelerar()
+                }
+            })
+        }
+        function moverDch() {
+            marginLeft += velocidad;
+            coche.style.marginLeft = marginLeft + 'px';
+
+            coche.style.transform = `rotate(${rotacion + 0}deg)`;
+        }
+        function moverIzq() {
+            marginLeft -= velocidad;
+            coche.style.marginLeft = marginLeft + 'px';
+
+            if (rotacion !== 270) {
+
+                coche.style.transform = `rotate(${rotacion - 180}deg)`;
+            } else {
+
+                coche.style.transform = `rotate(${90}deg)`;
+
+            }
+
+        }
+
+        function moverAlt() {
+            marginTop -= velocidad;
+            coche.style.marginTop = marginTop + 'px';
+            coche.style.transform = `rotate(${90}deg)`;
+        }
+        function moverBajo() {
+            marginTop += velocidad;
+            coche.style.marginTop = marginTop + 'px';
+            if (rotacion !== 180) {
+
+                coche.style.transform = `rotate(${-90}deg)`;
+            } else {
+                coche.style.transform = `rotate(${270}deg)`;
+            }
+        }
+        function frenar() {
+            transition += aceleracion;
+            coche.style.transition = transition + 's';
+        }
+        function acelerar() {
+            transition -= aceleracion;
+            coche.style.transition = transition + 's';
+        }
+
+
+
+
+
+        console.log(rotacion)
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
