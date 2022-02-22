@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./javascrip/modelo.js"></script>
+</head>
+
+<body>
+    <!--un formulario con nombre,email,salario, submit-->
+    <header>
+        <h1> EMPLEADOS</h1>
+    </header>
+    <main>
+        <section class="formulario">
+            <h2>Formulario de Empleados</h2>
+
+            <form>
+                <div>
+                    <label id="nombre">nombre</label>
+                    <input type="text" id="inputNombre">
+                </div>
+                <div>
+                    <label id="email">email</label>
+                    <input type="text" id="inputEmail">
+                </div>
+                <div>
+                    <label id="salario">salario</label>
+                    <input type="text" id="inputSalario">
+                </div>
+                <div>
+                    <label id="departamento">departamento</label>
+                    <input type="text" id="inputDepartamento">
+                </div>
+                <input id="inputSubmit" type="submit" value="Enviar">
+            </form>
+        </section>
+
+
+        <section>
+
+            <h2>Lista de Empleado</h2>
+            <select id="selectDepartamento">
+                <option value="contabilidad">Contabilidad🎁</option>
+                <option value="desarrollo">Desarrollo💋</option>
+                <option value="marketing">Marketing👏</option>
+            </select>
+        </section>
+
+        <section class="listaEmpleados">
+            <!--<h2>Lista por Departamento</h2>
+
+            <!--<div class="empleados">
+                <h3>NOMBRE</h3>
+                <P>EMAIL</P>
+                <P>EMPLEADO</P>
+                <P>DEPARTAMENTO</P>
+                <button class="btn">
+         </div>-->
+
+        </section>
+    </main>
+    <script src="./javascrip/vista.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cuadrado {
+            width: 300px;
+            height: 300px;
+            background-color: green;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cuadrado"></div>
+    <p id="tecla"></p>
+    <script>
+        document.addEventListener('keydown', capturaTeclas);
+
+        function capturaTeclas(event) {
+
+            switch (event.keyCode) {
+                case 37:
+                    mensaje = 'izq';
+                    break;
+                case 38:
+                    mensaje = 'alt';
+                    break;
+                case 39:
+                    mensaje = 'dech';
+                    break;
+                case 40:
+                    mensaje = 'abajo';
+                    break;
+                default:
+                    mensaje = 'no es una flecha';
+            }
+            document.getElementById('tecla').innerText = mensaje;
+        }
+        // eventos de raton sobre el cuadrado
+        const cuadrado = document.querySelector('.cuadrado');
+
+        cuadrado.addEventListener('mouseenter', (event) => {
+            console.log('entra el raton')
+            event.target.style.backgroundColor = 'red';
+            event.target.style.transform = 'scale(2)';
+        });
+        cuadrado.addEventListener('mouseleave', (event) => {
+            console.log('entra el raton')
+            event.target.style.backgroundColor = 'green';
+            event.target.style.transform = 'scale(1)';
+        });
+        cuadrado.addEventListener('mousemove', (event) => {
+            event.target.style.backgroundColor = `rgb(120,${event.layerX},${event.layerY} )`;
+        })
+
+    </script>
+</body>
+
+</html>
