@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+.container{ 
+  margin: 0 auto; 
+  background-color:lightblue; 
+  text-align: center;
+  height: 100vh;
+}
+header{
+  width: 1000px;
+  height: 100px;
+}
+.listaUsuarios{ 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.user{
+  background-color: beige;
+  width: 25%;
+  height: 250px; 
+  flex-wrap: wrap;
+  padding: 5px;
+  border: 10px solid white;
+}
+img{
+  border: 1px solid black;
+}
+
+h3{
+    text-align:center;
+
+}
