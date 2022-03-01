@@ -1,0 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Oooh+Baby:regular);
+
+body{
+    font-family: italic;
+}
+.row{
+    height: 200px;
+}
+.rojo{
+    background-color: rgb(241, 163, 163);
+}
+.verde{
+    background-color: rgb(164, 231, 164);
+}
+.azul{
+    background-color: rgb(185, 185, 223);
+}
+.negro{
+    color:white;
+    background-color: black;
+}

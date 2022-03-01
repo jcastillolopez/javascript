@@ -29,7 +29,6 @@ fetch('https://reqres.in/api/users')
     .then(response => response.json())
     .then(json => json.data)
     .then(datosCapturados => {
-        console.log(datosCapturados);
         const seccionCapturada = document.querySelector(".listaUsuarios");
         printUsers(datosCapturados, seccionCapturada)
     })
@@ -71,8 +70,8 @@ function printUser(pUser) {
     const div = document.createElement('div');
     div.classList.add("user");
 
-    div.appendChild(pAvatar);
     div.appendChild(pNombreCompleto);
+    div.appendChild(pAvatar);
     div.appendChild(pId);
     div.appendChild(pEmail);
     div.appendChild(pFirst_name);

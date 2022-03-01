@@ -69,9 +69,7 @@ function printUser(pUser) {
     const pLast_name = document.createElement('p');
     pLast_name.innerText = pUser.last_name;
 
-    const listaUsuarios = document.getElementsByClassName('.listaUsuarios');
-    document.listaUsuarios.appendChild(pAvatar);
-    document.listaUsuarios.appendChild(div)
+
 
     const div = document.createElement('div');
     div.classList.add("user");
@@ -82,7 +80,11 @@ function printUser(pUser) {
     div.appendChild(pFirst_name);
     div.appendChild(pLast_name)
 
-    console.log(div);
+    const listaUsuarios = document.getElementsByClassName('.listaUsuarios');
+    document.listaUsuarios.appendChild(pAvatar);
+    document.listaUsuarios.appendChild(div)
+
+    console.log(listaUsuarios);
     return div;
     //*****************pintar elementos dentro del div************ */
     // const pNombreCompeto = document.createElement('h3');
